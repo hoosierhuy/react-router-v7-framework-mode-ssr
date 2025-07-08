@@ -1,10 +1,10 @@
 import { useLoaderData } from 'react-router'
 
 // Local imports
-import Navbar from '~/navigation/Navbar'
-import type { MetaFunctionArgs } from './types'
+import Navbar from '~/components/Navbar'
+import type { MetaFunctionArgs, Product } from '~/types/product'
 
-// Meta function to set the page title and description
+// Meta function to set the browser tab's title and the DOM's meta tag's name and content attributes
 export function meta(args: MetaFunctionArgs) {
 	const product = args?.data
 	const count = Array.isArray(product) ? product.length : 0
@@ -30,12 +30,6 @@ export function meta(args: MetaFunctionArgs) {
 	]
 }
 
-interface Product {
-	id: number
-	title: string
-	thumbnail: string
-}
-
 export async function loader() {
 	const url =
 		'https://dummyjson.com/products?limit=10&skip=0&select=id,title,thumbnail'
@@ -44,9 +38,9 @@ export async function loader() {
 	if (!response.ok)
 		throw new Response('Failed to fetch products', { status: 500 })
 
-	// I can do this: const data = await response.json<ProductResponse>(), but
-	// my research indicated that Cloudflare Workers might not support this syntax yet,
-	// so I'm casting.
+	/* I could certainly write: const data = await response.json<ProductResponse>(), but
+	my research indicated that Cloudflare Workers or Vercel might not support this syntax yet,
+	so I'm casting product type. */
 	const data = (await response.json()) as { products: Product[] }
 
 	return data.products

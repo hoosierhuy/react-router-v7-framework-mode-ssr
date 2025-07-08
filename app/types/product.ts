@@ -1,10 +1,10 @@
 export interface Product {
 	id: number
 	title: string
-	description: string
-	images: string[]
+	description?: string
+	thumbnail?: string
+	images?: string[]
 }
-
 export interface MetaFunctionArgs {
 	data?: Product
 }

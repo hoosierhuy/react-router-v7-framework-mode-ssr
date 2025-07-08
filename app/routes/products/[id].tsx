@@ -1,8 +1,8 @@
 import { useLoaderData } from 'react-router'
 
 // Local imports
-import Navbar from '~/navigation/Navbar'
-import type { MetaFunctionArgs, Product } from './types'
+import Navbar from '~/components/Navbar'
+import type { MetaFunctionArgs, Product } from '~/types/product'
 
 // Meta function to set the page title and description
 export function meta(args: MetaFunctionArgs) {
@@ -37,18 +37,18 @@ export default function ProductDetail() {
 	return (
 		<main className="p-6">
 			<Navbar productsHref="/products" viewTitle="Products" />
+
 			<div className="max-w-xl mx-auto border rounded-lg p-6 flex flex-col items-center mt-12">
 				<img
-					src={product?.images[0]} // The Api always return images within an array
+					src={product?.images?.[0]} // The Api always return images within an array
 					alt={product?.title}
 					className="w-full h-64 object-cover rounded mb-4"
 				/>
 				<h1 className="text-2xl font-bold mb-2">{product?.title}</h1>
 				<p className="text-gray-700">{product?.description}</p>
 				<p>
-					Back to{' '}
 					<a href="/products" className="text-blue-600 hover:underline">
-						Products
+						Back to Products
 					</a>
 				</p>
 			</div>

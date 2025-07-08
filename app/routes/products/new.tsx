@@ -1,4 +1,4 @@
-import Navbar from '~/navigation/Navbar'
+import Navbar from '~/components/Navbar'
 
 // Server-side action for posting a product
 export async function action({ request }: { request: Request }) {

@@ -13,7 +13,8 @@ export default function CatchAll() {
 		<main className="p-8 text-center">
 			<h1 className="text-3xl font-bold mb-4">404 - Product Not Found</h1>
 			<p className="text-gray-600">
-				Sorry, the page you are looking for does not exist.
+				Sorry, the product you are looking for does not exist, perhaps we will
+				have it in the future.
 			</p>
 		</main>
 	)
