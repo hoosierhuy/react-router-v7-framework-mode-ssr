@@ -32,7 +32,7 @@ export default function Welcome({ ssr }: { ssr: string }) {
 					products have their own browser tab title, and if you inspect the
 					individual product pages, you will see that the DOM's meta tag's name
 					and content attributes are also set based on the product information
-					for SEO purposes.
+					for SEO purposes.🥂
 				</p>
 			</div>
 		</main>
