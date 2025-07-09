@@ -1,8 +1,4 @@
-type NavbarProps = {
-	productsHref?: string
-	viewTitle?: string
-	currentPath?: string
-}
+import type { NavbarProps } from '~/types/navBar'
 
 export default function Navbar({
 	productsHref = '/products',
