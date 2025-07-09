@@ -8,3 +8,8 @@ export interface Product {
 export interface MetaFunctionArgs {
 	data?: Product
 }
+
+export type ProductsProps = {
+	message?: string
+	products?: Product[]
+}

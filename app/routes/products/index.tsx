@@ -2,7 +2,7 @@ import { useLoaderData } from 'react-router'
 
 // Local imports
 import Navbar from '~/components/Navbar'
-import type { MetaFunctionArgs, Product } from '~/types/product'
+import type { MetaFunctionArgs, Product, ProductsProps } from '~/types/product'
 
 // Meta function to set the browser tab's title and the DOM's meta tag's name and content attributes
 export function meta(args: MetaFunctionArgs) {
@@ -44,11 +44,6 @@ export async function loader() {
 	const data = (await response.json()) as { products: Product[] }
 
 	return data.products
-}
-
-type ProductsProps = {
-	message?: string
-	products?: Product[]
 }
 
 function ProductCard({ product }: { product: Product }) {
