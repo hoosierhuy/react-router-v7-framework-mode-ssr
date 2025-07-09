@@ -30,12 +30,12 @@ export default function PostProduct({
 		<main className="p-6">
 			<Navbar viewTitle="Products" productsHref="/products" />
 
-			<section className="max-w-md mx-auto mt-10 bg-white rounded-xl shadow-lg p-8 border border-gray-200">
+			<div className="max-w-md mx-auto mt-10 bg-white rounded-xl shadow-lg p-8 border border-gray-200">
 				<h2 className="text-2xl font-bold mb-6 text-center text-gray-800">
 					Add Product
 				</h2>
 				<form method="post" className="space-y-5">
-					<div>
+					<section>
 						<label
 							htmlFor="title"
 							className="block text-sm font-medium text-gray-700 mb-1"
@@ -49,8 +49,8 @@ export default function PostProduct({
 							className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
 							placeholder="Product title"
 						/>
-					</div>
-					<div>
+					</section>
+					<section>
 						<label
 							htmlFor="price"
 							className="block text-sm font-medium text-gray-700 mb-1"
@@ -68,7 +68,7 @@ export default function PostProduct({
 							className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
 							placeholder="Product price"
 						/>
-					</div>
+					</section>
 					<button
 						type="submit"
 						className="w-full py-2 px-4 bg-blue-600 text-white font-semibold rounded-md shadow hover:bg-blue-700 transition-colors"
@@ -77,12 +77,12 @@ export default function PostProduct({
 					</button>
 				</form>
 				{actionData?.id && (
-					<div className="mt-6 p-4 bg-green-100 border border-green-300 rounded text-green-800 text-center">
+					<section className="mt-6 p-4 bg-green-100 border border-green-300 rounded text-green-800 text-center">
 						<strong>Product added:</strong> {actionData.title} (ID:{' '}
 						{actionData.id})
-					</div>
+					</section>
 				)}
-			</section>
+			</div>
 		</main>
 	)
 }

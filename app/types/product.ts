@@ -5,11 +5,11 @@ export interface Product {
 	thumbnail?: string
 	images?: string[]
 }
-export interface MetaFunctionArgs {
-	data?: Product
-}
 
 export type ProductsProps = {
-	message?: string
 	products?: Product[]
+}
+
+export interface MetaFunctionArgs {
+	data?: Product
 }
