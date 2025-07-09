@@ -1,6 +1,5 @@
 // Local imports
 import Navbar from '~/components/Navbar'
-import type { MetaFunctionArgs, Product } from '~/types/product'
 
 // Server-side action for posting a product
 export async function action({ request }: { request: Request }) {
