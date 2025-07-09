@@ -1,4 +1,6 @@
+// Local imports
 import Navbar from '~/components/Navbar'
+import type { MetaFunctionArgs, Product } from '~/types/product'
 
 // Server-side action for posting a product
 export async function action({ request }: { request: Request }) {
@@ -84,4 +86,15 @@ export default function PostProduct({
 			</section>
 		</main>
 	)
+}
+
+// Meta function to set the browser tab's title and the DOM's meta tag's name and content attributes
+export function meta() {
+	return [
+		{ title: 'Add New Product' },
+		{
+			name: 'description',
+			content: 'Add new product section for admins.',
+		},
+	]
 }
