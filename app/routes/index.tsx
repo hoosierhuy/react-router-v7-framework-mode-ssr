@@ -1,4 +1,4 @@
-import Nav from '~/components/Navbar'
+import Navbar from '~/components/Navbar'
 
 export function meta() {
 	return [
@@ -18,7 +18,7 @@ export function loader() {
 export default function Welcome({ ssr }: { ssr: string }) {
 	return (
 		<main className="flex items-center justify-center pt-16 pb-4">
-			<Nav />
+			<Navbar />
 
 			<div className="max-w-2xl mx-auto">
 				<h2 className="text-2xl font-bold text-center">Salve Amicis! </h2>
