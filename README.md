@@ -11,16 +11,16 @@ A YouTube video to accompany this project is coming soon.
 ## App Structure Overview
 
 react-router-v7-framework-mode-ssr/
-├── 📁 .git/                          # Git repository data
+├── 📁 .git/                          # Git repository
 ├── 📁 .react-router/                 # React Router build cache
 ├── 📁 .wrangler/                     # Cloudflare Wrangler cache
 ├── 📁 build/                         # Production build output
 ├── 📁 node_modules/                  # Dependencies
-├── 📁 workers/                       # Cloudflare Workers
-│   └── 📄 app.ts                     # Worker entry point
 ├── 📁 public/                        # Static assets
 │   ├── 📁 .well-known/              # Well-known URIs
 │   └── 🖼️ favicon.ico               # Site favicon
+├── 📁 workers/                       # Cloudflare Workers
+│   └── 📄 app.ts                     # Worker entry point
 ├── 📁 app/                           # Main application code
 │   ├── 📄 app.css                    # Global styles
 │   ├── 📄 entry.server.tsx           # SSR entry point
@@ -34,8 +34,8 @@ react-router-v7-framework-mode-ssr/
 │   │   └── 📁 products/             # Product routes
 │   │       ├── 📄 index.tsx         # Products list (/products)
 │   │       ├── 📄 [id].tsx          # Product detail (/products/:id)
-│   │       └── 📄 new.tsx           # New product (/products/new)
-│   └── 📁 types/                     # TypeScript type definitions
+│   │       └── 📄 new.tsx           # Add product form (/products/new)
+│   └── 📁 types/                     # TypeScript definitions
 │       └── 📄 product.ts            # Product type definitions
 ├── 📄 .gitignore                     # Git ignore rules
 ├── 📄 README.md                      # Project documentation
