@@ -21,6 +21,7 @@
     "@biomejs/biome": "2.0.6",
     "@cloudflare/vite-plugin": "^1.0.12",
     "@react-router/dev": "^7.5.3",
+    "@react-router/fs-routes": "7.6.3",
     "@tailwindcss/vite": "^4.1.4",
     "@types/node": "24.0.10",
     "@types/react": "^19.1.2",
