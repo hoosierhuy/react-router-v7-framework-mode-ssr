@@ -53,7 +53,8 @@ export default function Welcome({ ssr }: { ssr: string }) {
 						</svg>
 						RRv7
 					</a>
-					. Happy coding! 🚀
+					. And if you're wondering about the favicon, that's the princess of
+					darkness herself. Happy coding! 🚀
 				</p>
 			</div>
 		</main>
